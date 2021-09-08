@@ -9,14 +9,16 @@ def package_files(directory):
             paths.append(os.path.join('..', path, filename))
     return paths
 
-
-extra_files = package_files('data')
+extra_files = package_files('adr_tagger_data')
 
 setup(
     name='ADR_Tagger',
-    version='0.1',
-    description='Estracción de relaciones de RAM en textos biomédicos con Spacy y SKLearn.',
-    packages=find_packages(),
+    version='0.0.1',
+    description='Extracción de relaciones de RAM en textos biomédicos con Spacy y SKLearn.',
+    author='Jorge Tenorio Berrio - LSI - UNED',
+    author_email='jtenorio9@alumno.uned.es',
+    url='https://github.com/Chiriviki/ExtraccionRAM',
+    packages=find_packages(exclude=['adr_tagger_data', 'dist']),
     package_data={'': extra_files},
     include_package_data=True,
     install_requires=['jpype1==1.2.1',

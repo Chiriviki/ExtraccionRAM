@@ -51,7 +51,14 @@ def doc2dic(doc):
 
     return dic
 
+def print_results(doc_list):
 
+    drug_ents = len([ent for doc in doc_list for ent in doc.ents if ent.label_ == "DRUG"])
+    eff_ents = len([ent for doc in doc_list for ent in doc.ents if ent.label_ == "EFFECT"])
+
+    n_rels = len([rel for doc in doc_list for rel in doc._.relations if rel["type"]=="ADR" or rel["type"]=="adverse effect"])
+
+    print(f"Detectadas: \t {drug_ents} medicamentos \t {eff_ents} enfermedades \t {n_rels} reacciones adversas")
 
 
 def main():
@@ -90,7 +97,9 @@ def main():
     with open(out_file, "w", encoding="utf8") as f:
         json.dump(json_array, f, ensure_ascii=False, indent=4)
 
-    print("Finalizado. Creado en ", out_file)
+    print("Finalizado. Archivo de etiquetado creado en reado en ", out_file)
+
+    print_results(docs)
 
 
 if __name__ == '__main__':

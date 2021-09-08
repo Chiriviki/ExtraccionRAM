@@ -92,11 +92,11 @@ class QuickUMLS(object):
 
         self.keep_uppercase = keep_uppercase
 
-        # Check whether data is installed with lowercase flag and quickumls initiated with keeping uppercase words
+        # Check whether adr_tagger_data is installed with lowercase flag and quickumls initiated with keeping uppercase words
         # if self.to_lowercase_flag and self.keep_uppercase:
         #     raise ValueError('Database is installed with lowercase flag and quickumls is initiated with '
         #                      'keep_uppercase flag. This would prevent identifying concepts that contain all uppercase'
-        #                      'characters. Please reinstall data without --lowercase or run quickumls without'
+        #                      'characters. Please reinstall adr_tagger_data without --lowercase or run quickumls without'
         #                    '--keep_uppercase.')
 
         # language_fp = os.path.join(quickumls_fp, 'language.flag')

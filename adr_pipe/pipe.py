@@ -24,9 +24,9 @@ def _cargar_config():
 
     parent_path = pathlib.Path(__file__).parent.resolve()
 
-    data_path = os.path.join(pathlib.Path(parent_path).parent.resolve(), "data")
+    data_path = os.path.join(pathlib.Path(parent_path).parent.resolve(), "adr_tagger_data")
 
-    with open(os.path.join(parent_path, "config.json"), "r", encoding="utf8") as cfg_f:
+    with open(os.path.join(data_path, "../adr_tagger_data/config.json"), "r", encoding="utf8") as cfg_f:
         config = json.load(cfg_f)
 
     config["vocab_path"] = os.path.join(data_path, config["vocab_path"])

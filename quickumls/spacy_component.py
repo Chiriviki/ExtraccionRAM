@@ -17,7 +17,7 @@ class SpacyQuickUMLS(object):
 
         Args:
             nlp: Existing spaCy pipeline.  This is needed to update the vocabulary with UMLS CUI values
-            terms_fp (str): Path to terms data
+            terms_fp (str): Path to terms adr_tagger_data
             best_match (bool, optional): Whether to return only the top match or all overlapping candidates. Defaults to True.
             ignore_syntax (bool, optional): Wether to use the heuristcs introduced in the paper (Soldaini and Goharian, 2016). TODO: clarify,. Defaults to False
             **kwargs: quickumls keyword arguments (see quickumls in core.py)

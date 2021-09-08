@@ -1,6 +1,6 @@
 # Instalación
 
-###Requisitos mínimos
+### Requisitos
 
 - Python 3.8: https://www.python.org/downloads/
 - pip 20.2.3: https://pypi.org/project/pip/

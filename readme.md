@@ -24,9 +24,11 @@ Es importante utilizar los archivos distribuidos en esta herramienta, y no los d
 La herramienta se distribuye empaquetado en un archivo de tipo `tar.gz`.
 
 1. Descargar los archivos [aquí](https://1drv.ms/u/s!Ahp4NIuNip6Ahvla_qyroRGYSTk0zg?e=DOIeXx)
-2. Ejecutar `pip install --use-feature=2020-resolver <ruta_ADR-Tagger>`
+2. Ejecutar `pip install <ruta_ADR-Tagger>`
 
-Mediante este comando se descargan e instalan todas las dependencias Python y se añade la ruta de la herramienta al `PATH` de ejecución. Es importante usar el parámetro `--use-2020-resolver` para que Spacy quede correctamente instalado.
+Mediante este comando se descargan e instalan todas las dependencias Python y se añade la ruta de la herramienta al `PATH` de ejecución.
+
+En caso de tener problemas con la versión de `pip` añadir el parámetro `--use-feature=2020-resolver`. 
 
 
 # Uso de la herramienta
